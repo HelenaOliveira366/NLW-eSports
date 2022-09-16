@@ -1,0 +1,180 @@
+:root{
+    font-family: 'Inter', sans-serif;
+}
+/*----------ANIMAÇÃO DOS CARDS-----------*/
+/*Para o 1º section do main*/
+main section:nth-child(1){
+    animation-delay: 0.3s;
+}
+
+/*Para o 2º section do main*/
+main section:nth-child(2){
+    animation-delay: 0.6s;
+}
+
+/*Para o 3º section do main*/
+main section:nth-child(3){
+    animation-delay: 0.9s;
+}
+
+/*Animação de aparição dos cards*/
+@keyframes fromBottom{
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to{
+        opacity: 1;
+        /*Posição definida por mim no css*/
+        transform: translateY(0);
+    }
+}
+
+/*----------RESET----------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.gradient{
+    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ab 50.50%, #e2d45c 100%);
+}
+
+/*------------ESTILIZAÇÃO DO HTML------------*/
+
+body{
+    background-image: url(./Images/Fundo.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+
+    line-height: 160%;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 64px 0;
+}
+
+header div,
+header img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header div{
+    width: 125px;
+    height: 125px;
+
+    /*Aplicar animação de aparição dos cards*/
+    animation: fromBottom 0.7s backwards;
+    /*Tempo de espera para todas caixas do header aparecerem */
+    animation-delay: 0.4s;
+}
+
+header img{
+    object-fit: cover;
+}
+
+main{
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+main section{
+    color: white;
+    border-radius: 10px;
+    padding-top: 5px;
+
+    /*Aplicar animação de aparição dos cards*/
+    animation: fromBottom 0.7s backwards;
+}
+
+section div{
+    background-color: #2a2534;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2{
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: -0.47px;
+}
+
+section p{
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.18px;
+    color: #a1a1aa
+}
+
+section ul{
+    display: flex;
+    gap: 16px; /*O gap funciona por conta do display flex*/
+    flex-wrap: wrap; /*Vai ajustar os elementos conforme o tamanho da tela*/
+
+    margin-top: 24px;
+}
+/*Ao passar o mouse em cima do elemento 
+o item vai aumentar sua escala e 0.3s*/
+section ul li{
+    transition: transform(0.3s);
+}
+
+section ul li:hover{
+    transform: scale(1.1);
+}
+/*-----------------------------------*/
+.games-list img{
+    width: 90px;
+    height: 120px;
+    border-radius: 8px;
+}
+
+.channels-list img{
+    border-radius: 50%;
+    width: 70px;
+}
+
+footer{
+    color: white;
+    font-weight: 400;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul{
+    display: flex;
+}
+
+footer li{
+    margin: 8px 16px;
+}
