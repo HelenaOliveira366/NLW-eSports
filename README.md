@@ -17,4 +17,6 @@
 - Cards
 - Estruturação de elementos HTML
 
-> 8 horas investidas
+> Contato
+- E-mail: hs.oliveira.webdeveloper@gmail.com
+- LinkedIn: https://www.linkedin.com/in/helena-oliveira-785840234
